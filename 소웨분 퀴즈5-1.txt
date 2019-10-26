@@ -1,0 +1,39 @@
+class Solution {
+ 
+	boolean solution(String s) {
+		boolean answer = false;
+ 
+		int count = 0;
+ 
+       
+ 
+		for(int i = 0; i < s.length(); i++) { //문자열 길이만큼 반복한다.  
+ 
+     
+ 
+ 			if(s.substring(i, (i+1)).equals("(")) // 만약에 괄호가 ( 라면 
+				count++; //카운트 ++ 하고 
+ 
+				else{ // 아니면 
+ 
+					count--; // 카운트 -- 한다
+
+						 if (count < 0) //카운트가 마이너스가 되면 
+ 
+							break;
+ 
+				}
+ 
+			}
+ 
+
+			if (count == 0) //스택이 딱 빈다면 ? 
+ 
+				answer = true;
+	 
+ 
+		return answer;
+ 
+	}
+ 
+} 
